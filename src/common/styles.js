@@ -6,6 +6,7 @@ export const Container = styled.div`
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
+    width: 100%;
 `;
 
 export const Title = styled.h2`
@@ -33,7 +34,7 @@ export const MoviesHorizontalList = styled.div`
 
 export const MovieCard = styled.div`
     box-shadow: 1px 1px 10px rgba(0,0,0,.3);
-    margin: 15px 20px;
+    margin: 15px auto;
     padding: 10px;
     width: 280px;
     &>* {

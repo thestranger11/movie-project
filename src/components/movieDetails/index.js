@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {MovieDetailed} from '../common/styles'
+import {Link} from "react-router-dom";
+import {MovieDetailed} from '../../common/styles'
+import MovieField from './movieField';
+import Breadcrumb from '../breadcrumb';
 
 
 const MovieDetails = (props) => {
@@ -25,18 +28,20 @@ const MovieDetails = (props) => {
   
     return (
       <>
-        {/* <Link to={`/`}>Go back to search books</Link>*/}
         {movie && (
             <MovieDetailed id="movieId" >
-              <div className="background" style={{backgroundImage: 'url('+ movie.Poster +')'}} />
+              <div className="background" style={{backgroundImage: `url(${movie.Poster})`}} />
               <div className="container">
+                <Breadcrumb />
                 <div className="image-container">
                     <img src={movie.Poster} alt={movie.Title+"_image"} />
                 </div>
                 <div className="details">
                   <h1>{movie.Title}</h1>
-                  <div className="movie-field"><label>Genre: </label>{movie.Genre}</div>
-                  <div className="movie-field"><label>Year: </label>{movie.Year}</div>
+                  <MovieField label="Genre" value={movie.Genre} />
+                  <MovieField label="Year" value={movie.Year} />
+                  {/* <div className="movie-field"><label>Genre: </label>{movie.Genre}</div> */}
+                  {/* <div className="movie-field"><label>Year: </label>{movie.Year}</div> */}
                   <div className="movie-field"><label>Imdb Rating: </label>{movie.imdbRating}</div>
                   <div className="movie-field"><label>Imdb Votes: </label>{movie.imdbVotes}</div>
                   <div className="movie-field"><label>Released: </label>{movie.Released}</div>

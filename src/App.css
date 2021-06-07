@@ -57,3 +57,12 @@
 .slick-prev:before, .slick-next:before {
     color: cornflowerblue;
 }
+.slick-prev {
+    left: 0;
+}
+.slick-next {
+    right: 0;
+}
+.slick-list {
+    margin: 0 auto;
+}

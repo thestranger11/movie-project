@@ -3,7 +3,7 @@ import Movie from './movieList/Movie';
 import { fetchMovie } from './api/fetchMovie';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { Container, MoviesHorizontalList, SearchInput } from '../common/styles';
+import { MoviesHorizontalList, SearchInput } from '../common/styles';
 
 class Search extends Component  {
     
@@ -17,7 +17,6 @@ class Search extends Component  {
         if(e.key === 'Enter') {
             const data = await fetchMovie(this.state.query);
             this.setState({ movies: data.Search, query: ''});
-            console.log(this.state.movies)
         }
     }
 
