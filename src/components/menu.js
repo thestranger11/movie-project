@@ -13,6 +13,9 @@ const menuItems = [
     },{
         title: 'Search',
         url: '/search'
+    },{
+        title: 'Join',
+        url: '/join'
     }
 ];
 let key = 0;

@@ -5,7 +5,7 @@ import { MovieCard } from '../../common/styles';
 
 const Movie = (props) => {
     return (
-        <MovieCard id={props.imdbID}>
+        <MovieCard id={props.imdbID} marginHorizontal={props.marginHorizontal}>
             <Link to={`/movies/${props.movieId}`}>
                 <h3>{props.Title}</h3>
                 <img src={`${props.Poster === "N/A" ? noImage : props.Poster}`}

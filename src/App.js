@@ -11,6 +11,7 @@ import Search from './components/search'
 //styles
 import './App.css';
 import { Main } from './common/styles';
+import SignUp from './pages/auth/signUp';
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
             <Route path="/movies/:movieId" component={MovieDetails} />
             <Route exact path="/featured" component={MovieList} />
             <Route exact path="/search" component={Search} />
+            <Route exact path="/join" component={SignUp} />
           </Switch>
         </Main>
       </Router>

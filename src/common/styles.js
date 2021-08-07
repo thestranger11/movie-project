@@ -37,6 +37,10 @@ export const MovieCard = styled.div`
     margin: 15px auto;
     padding: 10px;
     width: 280px;
+    ${props => props.marginHorizontal && `
+        margin-left: 5px;
+        margin-right: 5px;
+    `}
     &>* {
         max-width: 100%;
         text-decoration: none;
@@ -77,17 +81,17 @@ export const MovieCard = styled.div`
     }
 `;
 
-export const SearchInput = styled.input`
+export const StyledInput = styled.input`
     border: none;
     border-bottom: 1px solid ${colors.persianGreen};
     padding: 10px 2px;
-    margin: 5% auto;
     display: block;
     font-size: 18px;
     font-family: ${fonts.primary}, ${fonts.secondary}, ${fonts.fallback};
     color: ${colors.grey};
-    width: 300px;
-    max-width: 98%;
+    width: 100%;
+    /* max-width: 98%; */
+    background: unset;
     &:focus {
         outline: none;
     }

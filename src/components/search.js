@@ -3,7 +3,8 @@ import Movie from './movieList/Movie';
 import { fetchMovie } from './api/fetchMovie';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { MoviesHorizontalList, SearchInput } from '../common/styles';
+import { MoviesHorizontalList, StyledInput } from '../common/styles';
+import Input from './input';
 
 class Search extends Component  {
     
@@ -24,19 +25,15 @@ class Search extends Component  {
         const movies = this.state.movies;
         return (
                 <div className="search-container">
-                    <SearchInput
-                        type="text"
-                        className="search"
+                    <Input
                         placeholder="Search by name"
-                        value={this.state.query}
-                        onChange={(e) => this.setState({query: e.target.value})}
+                        valueChanged={(val) => this.setState({query: val})}
                         onKeyPress={this.handleSearch}
                     />
                     {movies && (
                         <MoviesHorizontalList>
                             <div className="movie-list-wrapper">
-                                {movies.map
-                                (item => { 
+                                {movies.map(item => { 
                                     return (
                                         <Movie
                                             Title={item.Title}
@@ -46,6 +43,7 @@ class Search extends Component  {
                                             Type={item.Type}
                                             key={item.imdbID}
                                             movieId={item.imdbID}
+                                            marginHorizontal
                                         />
                                     )
                                 })}
