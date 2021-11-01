@@ -8,8 +8,8 @@ export const fetchMovie = async (query) => {
         params: {
             apikey: API_KEY,
             s: query,
-            plot: 'full'
-        }
+            plot: 'full',
+        },
     });
     return data;
-}
+};

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {colors, fonts} from './utils';
-import {Constants} from './constants';
+import { colors, fonts } from './utils';
+import { Constants } from './constants';
 
 export const Container = styled.div`
     max-width: 1000px;
@@ -13,7 +13,8 @@ export const Title = styled.h2`
     padding: 0 10px;
     border-left: 3px solid ${colors.persianGreen};
     color: ${colors.grey};
-    font-family: ${fonts.primary}, ${fonts.secondary}, ${fonts.fallback};
+    font-family: ${fonts.primary}, ${fonts.secondary},
+        ${fonts.fallback};
     font-weight: 400;
 `;
 
@@ -33,11 +34,13 @@ export const MoviesHorizontalList = styled.div`
 `;
 
 export const MovieCard = styled.div`
-    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     margin: 15px auto;
     padding: 10px;
     width: 280px;
-    ${props => props.marginHorizontal && `
+    ${(props) =>
+        props.marginHorizontal &&
+        `
         margin-left: 5px;
         margin-right: 5px;
     `}
@@ -52,7 +55,8 @@ export const MovieCard = styled.div`
         color: ${colors.grey};
         font-size: 18px;
         text-align: center;
-        font-family: ${fonts.primary}, ${fonts.secondary}, ${fonts.fallback};
+        font-family: ${fonts.primary}, ${fonts.secondary},
+            ${fonts.fallback};
     }
     img {
         height: 300px;
@@ -87,7 +91,8 @@ export const StyledInput = styled.input`
     padding: 10px 2px;
     display: block;
     font-size: 18px;
-    font-family: ${fonts.primary}, ${fonts.secondary}, ${fonts.fallback};
+    font-family: ${fonts.primary}, ${fonts.secondary},
+        ${fonts.fallback};
     color: ${colors.grey};
     width: 100%;
     /* max-width: 98%; */
@@ -96,7 +101,7 @@ export const StyledInput = styled.input`
         outline: none;
     }
     &::placeholder {
-        color: ${colors.grey}
+        color: ${colors.grey};
     }
 `;
 
@@ -120,9 +125,10 @@ export const MainMenu = styled.nav`
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        &:hover, &.selected {
+        &:hover,
+        &.selected {
             background: ${colors.aquamarine};
-            color: ${colors.grey}
+            color: ${colors.grey};
         }
     }
 `;
@@ -146,7 +152,7 @@ export const MovieDetailed = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        background: rgba(0,0,0,.5);
+        background: rgba(0, 0, 0, 0.5);
         z-index: 0;
     }
     .background {
@@ -162,8 +168,8 @@ export const MovieDetailed = styled.div`
     .container {
         display: flex;
         flex-wrap: wrap;
-        background: rgba(256,256,256,.9);
-        box-shadow: 0 0 20px rgba(0,0,0,.3);
+        background: rgba(256, 256, 256, 0.9);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         padding: 30px 3%;
         border-radius: 10px;
         position: relative;
@@ -182,7 +188,8 @@ export const MovieDetailed = styled.div`
             h1 {
                 color: ${colors.ceruleanCrayola};
                 font-size: 1.8rem;
-                font-family: ${fonts.primary}, ${fonts.secondary}, ${fonts.fallback};
+                font-family: ${fonts.primary}, ${fonts.secondary},
+                    ${fonts.fallback};
             }
         }
         .movie-field {
@@ -191,9 +198,10 @@ export const MovieDetailed = styled.div`
             font-weight: 300;
             font-size: 18px;
             label {
-                font-family: ${fonts.primary}, ${fonts.secondary}, ${fonts.fallback};
+                font-family: ${fonts.primary}, ${fonts.secondary},
+                    ${fonts.fallback};
                 font-weight: 700;
-                color: ${colors.midnightGreen}
+                color: ${colors.midnightGreen};
             }
             &.plot {
                 width: 100%;

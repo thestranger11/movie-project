@@ -7,9 +7,9 @@ export const colors = {
     aquamarine: '#9FFFCB',
     ceruleanCrayola: '#00A5CF',
     midnightGreen: '#004E64',
-}
+};
 export const fonts = {
     primary: 'Quicksand',
     secondary: 'Open Sans',
-    fallback: 'sans-serif'
-}
+    fallback: 'sans-serif',
+};

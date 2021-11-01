@@ -1,16 +1,19 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {Constants} from '../../common/constants';
+import { Constants } from '../../common/constants';
 import Input from '../../components/input';
+import Button from '../../components/button';
 
-const SignUp = props => {
+const SignUp = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const signupHandler = () => {
+        // TODO: handle sign up
+    };
     return (
         <Body>
             <Container>
                 <FieldsContainer>
-                    
                     <Input
                         type="email"
                         placeholder="Email"
@@ -21,11 +24,12 @@ const SignUp = props => {
                         placeholder="Password"
                         valueChanged={(val) => setPassword(val)}
                     />
+                    <Button onClick={signupHandler}>Sign Up</Button>
                 </FieldsContainer>
             </Container>
         </Body>
-    )
-}
+    );
+};
 export default SignUp;
 
 const Body = styled.div`
@@ -53,18 +57,17 @@ const Container = styled.div`
     width: 90%;
     max-width: 1000px;
     height: 90%;
-    box-shadow: 1px 1px 10px rgba(0,0,0,.1);
-    background: rgba(256,256,256,.1);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(256, 256, 256, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
 `;
-const FieldsContainer = styled.div`
+const FieldsContainer = styled.form`
     width: 90%;
     max-width: 540px;
-    box-shadow: 1px 1px 10px rgba(0,0,0,.1);
-    background: rgba(256,256,256,.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
 `;
