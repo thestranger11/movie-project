@@ -3,13 +3,30 @@ import styled from 'styled-components';
 import { Constants } from '../../common/constants';
 import Input from '../../components/input';
 import Button from '../../components/button';
+import firebaseConfig from '../../config';
+import { Redirect } from 'react-router-dom';
 
 const SignUp = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const signupHandler = () => {
+
+    const [currentUser, setCurrentUser] = useState(null);
+    const signupHandler = (e) => {
         // TODO: handle sign up
+        e.preventDefault();
+        try {
+            firebaseConfig
+                .auth()
+                .createUserWithEmailAndPassword(email, password);
+            setCurrentUser(true);
+        } catch (error) {
+            // alert(error);
+            console.warn(error);
+        }
     };
+    if (currentUser) {
+        return <Redirect to="/" />;
+    }
     return (
         <Body>
             <Container>

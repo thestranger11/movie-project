@@ -59,7 +59,7 @@ const Menu = (props) => {
                 );
             })}
             <Btn onClick={handleThemeChange}>
-                <span class="material-icons material-icons-outlined">
+                <span className="material-icons material-icons-outlined">
                     nightlight_round
                 </span>
             </Btn>
